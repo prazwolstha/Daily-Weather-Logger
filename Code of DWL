@@ -1,0 +1,30 @@
+#include<stdio.h>
+#define Maximum 100
+
+int main(){
+
+int i;
+int day;
+float temp[Maximum];
+float rain[Maximum];
+double totaltemperature=0, totalrainfall=0;
+
+
+printf("Enter Number of Day:");
+scanf("%d",&day);
+
+for(i=0;i<day;i++){
+printf("Day %d\nEnter temperature in °C:",i+1);
+scanf("%f",&temp[i]);
+printf("Enter Rainfall in mm:");
+scanf("%f",&rain[i]);
+
+totaltemperature +=temp[i];
+totalrainfall +=rain[i];
+}
+float averagetemperature= totaltemperature / day;
+
+printf("Average Temperature is:%.2f°C\n", averagetemperature);
+printf("Total Rainfall is:%.2fmm\n",totalrainfall);
+return 0;
+}
